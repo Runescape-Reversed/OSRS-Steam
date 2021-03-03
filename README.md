@@ -40,3 +40,8 @@ AddMenuOption(v8, (__int64)&ExamineString, (__int64)&v165, 1002i64, *v171, v22, 
 
 By searching for immediate value `1002`, and going to the only cmp, we are directly inside DoAction. This is because DoAction uses a magic identifier to decide
 which action is actually being executed. `1002` is a some-what weird value, so very few results show up.
+
+## Legal
+None of this is my property, and I will remove the repository on request. I personally think Jagex should invest in custom protection solutions, or something 
+such as VMP to protect critical pieces of game code, and to prevent automatic tools from functioning further. In order for this to be fully effective, my repository
+cannot exist. So I hope they take this down at some point. :)
