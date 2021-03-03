@@ -1,6 +1,7 @@
 #pragma once
 #include <Windows.h>
 
+#pragma pack(push, 1)
 class ByteBuffer
 {
 private:
@@ -18,3 +19,4 @@ public:
     _In_ INT16 Short
   );
 }
+#pragma pack(pop)
