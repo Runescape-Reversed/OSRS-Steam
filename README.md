@@ -24,3 +24,19 @@ void __fastcall WriteShortNeg(BYTE_BUFFER *Buffer, INT16 Short)
 ```
 
 It is recommended that Jagex __forceinline these functions in the future to prevent rampant packet bots. 
+
+## Strings
+Strings are created at runtime, I assume to handle multiple languages, but who knows.
+
+```
+CreateStringRef(&ExamineString, (__int64)"Examine", (__int64)"");
+```
+
+The engine is pretty simple, so the x-refs to `ExamineString` for instance lead us directly to `DoAction`.
+
+```
+AddMenuOption(v8, (__int64)&ExamineString, (__int64)&v165, 1002i64, *v171, v22, v24, 0);
+```
+
+By searching for immediate value `1002`, and going to the only cmp, we are directly inside DoAction. This is because DoAction uses a magic identifier to decide
+which action is actually being executed. `1002` is a some-what weird value, so very few results show up.
