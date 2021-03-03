@@ -11,5 +11,10 @@ public:
   UINT64 CurrentOffset;
   
 public:
-  VOID WriteShortNeg(INT16 Short);
+  //
+  // Writes a short with one byte negated.
+  //
+  VOID WriteShortNeg(
+    _In_ INT16 Short
+  );
 }
