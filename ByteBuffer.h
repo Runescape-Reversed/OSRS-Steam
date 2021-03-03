@@ -1,3 +1,6 @@
+#pragma once
+#include <Windows.h>
+
 class ByteBuffer
 {
 private:
