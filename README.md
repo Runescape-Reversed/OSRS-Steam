@@ -9,20 +9,17 @@ The networking protocol obfuscation is still 100% in place. However, extraction 
 such as VTIL. This may enable the use for automatic encoding/decoding of packets in the future. 
 
 ```
-PCHAR __fastcall WriteShortNeg(BYTE_BUFFER *Buffer, __int16 Short)
+void __fastcall WriteShortNeg(BYTE_BUFFER *Buffer, INT16 Short)
 {
-  __int64 off1; // r9
+  UINT64 off1; // r9
   UINT64 off2; // r8
-  PCHAR result; // rax
 
   off1 = Buffer->CurrentOffset;
   Buffer->CurrentOffset = off1 + 1;
   Buffer->Buffer[off1] = Short + -128;
   off2 = Buffer->CurrentOffset;
   Buffer->CurrentOffset = off2 + 1;
-  result = Buffer->Buffer;
-  result[off2] = HIBYTE(Short);
-  return result;
+  Buffer->Buffer[off2] = HIBYTE(Short);
 }
 ```
 
