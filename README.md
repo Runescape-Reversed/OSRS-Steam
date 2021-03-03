@@ -45,3 +45,5 @@ which action is actually being executed. `1002` is a some-what weird value, so v
 None of this is my property, and I will remove the repository on request. I personally think Jagex should invest in custom protection solutions, or something 
 such as VMP to protect critical pieces of game code, and to prevent automatic tools from functioning further. In order for this to be fully effective, my repository
 cannot exist. So I hope they take this down at some point. :)
+
+In the case that they do not take this route, I hope this will help third party clients continue to exist into the future with the native code base.
